@@ -46,7 +46,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="CPTwitterAppCBB"
+                    android:host="cpsimpletweets"
                     android:scheme="oauth" />
             </intent-filter>
         </activity>
