@@ -1,1 +1,1 @@
-Just initial attempt to ass week 3
+Just initial attempt to assignment week 3

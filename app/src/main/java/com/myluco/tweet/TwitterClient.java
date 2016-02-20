@@ -65,7 +65,7 @@ public class TwitterClient extends OAuthBaseClient {
         String apiUrl = getApiUrl("application/rate_limit_status.json");
 		// Can specify query string params directly or through RequestParams.
 		RequestParams params = new RequestParams();
-		params.put("resources", "help,users,search,statusesount");
+		params.put("resources", "help,users,search,statuses");
 		client.get(apiUrl, params, handler);
     }
 
