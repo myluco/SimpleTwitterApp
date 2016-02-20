@@ -1,4 +1,4 @@
-package com.codepath.apps.restclienttemplate.models;
+package com.myluco.tweet.models;
 
 import java.util.List;
 

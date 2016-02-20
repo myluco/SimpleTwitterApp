@@ -1,4 +1,4 @@
-package com.codepath.apps.restclienttemplate;
+package com.myluco.tweet;
 
 import android.content.Context;
 
@@ -17,10 +17,10 @@ public class TwitterApplication extends com.activeandroid.app.Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		TwitterApplication.context = this;
+		com.myluco.tweet.TwitterApplication.context = this;
 	}
 
 	public static TwitterClient getRestClient() {
-		return (TwitterClient) TwitterClient.getInstance(TwitterClient.class, TwitterApplication.context);
+		return (TwitterClient) TwitterClient.getInstance(TwitterClient.class, com.myluco.tweet.TwitterApplication.context);
 	}
 }

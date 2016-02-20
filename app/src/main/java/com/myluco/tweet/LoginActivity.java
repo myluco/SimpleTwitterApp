@@ -1,4 +1,4 @@
-package com.codepath.apps.restclienttemplate;
+package com.myluco.tweet;
 
 import android.content.Intent;
 import android.os.Bundle;
