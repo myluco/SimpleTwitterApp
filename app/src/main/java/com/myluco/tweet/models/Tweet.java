@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.Locale;
 /**
  * Created by lcc on 2/20/16.
  */
-public class Tweet {
+public class Tweet implements Serializable{
     /*
     "text": "You'd be right more often if you thought you were wrong.",
     "contributors": null,
@@ -86,6 +87,10 @@ public class Tweet {
         }
 
     }
+
+    public Tweet(User user) {
+        this.user = user;
+    }
     public static List<Tweet> ParseTweets (JSONArray response) {
         ArrayList<Tweet> result = new ArrayList<Tweet>();
         JSONObject jsonObject;
@@ -97,5 +102,9 @@ public class Tweet {
             }
         }
         return result;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
     }
 }

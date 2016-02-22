@@ -17,10 +17,10 @@ The following user stories must be completed:
 * [x]  User should be displayed the username, name, and body for each tweet (2 points)
 * [x] User should be displayed the relative timestamp for each tweet "8m", "7h" (1 point)
 * [x] User can view more tweets as they scroll with infinite pagination (1 point)
-* [] User can compose a new tweet
-* [] User can click a “Compose” icon in the Action Bar on the top right (1 point)
-* [] User can then enter a new tweet and post this to twitter (2 points)
-* [] User is taken back to home timeline with new tweet visible in timeline (1 point)
+* User can compose a new tweet
+* [x] User can click a “Compose” icon in the Action Bar on the top right (1 point)
+* [x] User can then enter a new tweet and post this to twitter (2 points)
+* [x] User is taken back to home timeline with new tweet visible in timeline (1 point)
 
 The following advanced user stories are optional but recommended:
 
@@ -50,11 +50,7 @@ Tweets are persisted into sqlite and can be displayed from the local DB (2 point
 
 Here's a walkthrough of implemented user stories:
 
-<a href="http://i.imgur.com/BtAG7yQ.gifv" target="_blank">Video Walkthrough</a>
-
-Showing exceptions: Network not available and search query is blank
-
-<a href="http://i.imgur.com/7rgzu77.gifv" target="_blank">Video Walkthrough for Exceptions</a>
+<a href="http://i.imgur.com/DrlYEOC.gifv" target="_blank">Video Walkthrough</a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

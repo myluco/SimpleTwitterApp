@@ -3,10 +3,12 @@ package com.myluco.tweet.models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 /**
  * Created by lcc on 2/20/16.
  */
-public class User {
+public class User implements Serializable{
     /*
     "user": {
       "name": "Taylor Singletary",
@@ -46,6 +48,9 @@ public class User {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+    }
+    public User() {
 
     }
 }

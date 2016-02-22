@@ -7,7 +7,9 @@ import android.content.Context;
 
 import com.codepath.oauth.OAuthBaseClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.myluco.tweet.models.Tweet;
 
 /*
  * 
@@ -62,6 +64,25 @@ public class TwitterClient extends OAuthBaseClient {
 		RequestParams params = new RequestParams();
 		params.put("resources", "users");
 		getClient().get(apiUrl, params, handler);
+    }
+
+	void getUser(AsyncHttpResponseHandler handler) {
+		String apiUrl = getApiUrl("account/verify_credentials.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+		getClient().get(apiUrl, params, handler);
+	}
+    /*
+    https://api.twitter.com/1.1/statuses/update.json
+    status (body of text)
+    in_reply_to_status_id (optional)
+     */
+    public void sendTweet(Tweet newTweet, AsyncHttpResponseHandler handler) {
+        String apiUrl = getApiUrl("statuses/update.json");
+		// Can specify query string params directly or through RequestParams.
+		RequestParams params = new RequestParams();
+        params.put("status",newTweet.getBody());
+		getClient().post(apiUrl, params, handler);
     }
 
     //Compose a Tweet
